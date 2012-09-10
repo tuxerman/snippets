@@ -1,3 +1,8 @@
+""" Code snippet to recursively generate all-possible anagrams of a word.
+    Though it says 'word', it works on any string. However words are more ideal.
+"""
+
+#Recursive function
 def anagram(block):
    if (len(block) <= 2):
       permu=list()
@@ -11,13 +16,15 @@ def anagram(block):
             permu.append(each)
    return permu
              
+#function to generate a list with 'letter' occupying all possible positions inside 'word'
 
 def rotate(letter, word):
    rotatedlist=list()
    for i in range(len(word)+1):
       rotatedlist.append(word[:i]+letter+word[i:])
    return rotatedlist
-         
+
+#main function         
 def main():
    word=raw_input('Enter the word to be anagrammed: ')	#for example: 'asd'
    print "\nAnagrams:" 
