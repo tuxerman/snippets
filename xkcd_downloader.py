@@ -7,6 +7,7 @@ Sriram Padmanabhan
 screamingwdm2 at gmail dot com
 """
 
+
 import re,urllib,os,subprocess
 
 mainpage=urllib.urlopen("http://www.xkcd.org")
@@ -24,7 +25,6 @@ for (num_left,num_right,num_single) in re.findall(r'(\d+)-(\d+)|(\d+)',rangeinpu
 	if num_left is not '' and num_right is not '':
 		for i in range(int(num_left),int(num_right)+1):
 			comiclist.append(i)
-#print comiclist
 
 url_error=list()
 wget_arg=''
